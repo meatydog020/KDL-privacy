@@ -1,1 +1,126 @@
+# Privacy Policy
 
+**Last updated: 3 October 2026**
+
+This Privacy Policy explains how the Atlas Life Dashboard ("Atlas", "the application", "we", "us", or "our") handles information when you connect your WHOOP account to the application.
+
+Atlas is a personal, locally operated life-management dashboard running on a Raspberry Pi. It is not a commercial service and is intended for personal use.
+
+## Information We Collect
+
+When a WHOOP account is connected, Atlas may receive information from WHOOP through the WHOOP API, depending on the permissions granted to the application.
+
+The current integration requests access to:
+
+* Recovery information
+* Cycle information
+* Sleep information
+* Workout information
+* Offline access for token refresh
+
+The application does not currently request WHOOP profile or body-measurement permissions.
+
+WHOOP information received by Atlas may include health and fitness information contained within the records returned by the WHOOP API. This can include, among other information:
+
+* Recovery scores and related recovery measurements
+* Heart rate variability
+* Resting heart rate
+* Cycle strain and timing information
+* Sleep performance and sleep timing
+* Sleep duration and sleep-stage information
+* Workout information, including activity and strain data
+* Other fields contained in WHOOP records returned through the API
+
+Atlas stores the WHOOP records it receives locally. The application currently stores the complete JSON records returned by the relevant WHOOP API endpoints rather than retaining only the individual fields displayed by the dashboard.
+
+## How We Use Information
+
+WHOOP information is used solely to provide functionality within the personal Atlas dashboard.
+
+This includes:
+
+* Displaying recovery information
+* Displaying cycle strain information
+* Displaying sleep information
+* Providing information that can be used by the dashboard's planning and workout features
+* Maintaining a local cache so the dashboard does not need to request WHOOP data every time it is viewed
+* Maintaining the connection to the user's WHOOP account
+
+Atlas does not sell WHOOP information.
+
+Atlas does not use WHOOP information for advertising.
+
+Atlas does not use WHOOP information for analytics or advertising profiling.
+
+## Where Information Is Stored
+
+Atlas is designed as a local-first application.
+
+WHOOP information retrieved by Atlas is stored locally on the Raspberry Pi running the application, in its local SQLite database.
+
+OAuth tokens are stored locally in a protected file on the Raspberry Pi. The token file is configured with owner-only filesystem permissions.
+
+Atlas does not intentionally transmit WHOOP health information to analytics providers, advertising networks, data brokers, or other third parties.
+
+Information is transmitted directly to WHOOP when the application authenticates with WHOOP or requests WHOOP data.
+
+If the Atlas dashboard is accessed from another device on the same local network, WHOOP information returned by the Atlas server may also be transmitted from the Raspberry Pi to that device so that the dashboard can display the information.
+
+## Data Retention
+
+WHOOP records retrieved by Atlas are cached locally.
+
+The current implementation does not automatically delete older cached WHOOP records. Records therefore remain in the local database until they are removed separately.
+
+OAuth authorization state used temporarily during account connection is deleted after the authorization process is completed.
+
+OAuth access and refresh tokens are retained locally as necessary to maintain the WHOOP connection.
+
+## WHOOP
+
+Atlas uses the WHOOP API to obtain information from the user's WHOOP account.
+
+WHOOP's own privacy practices and terms apply to information processed by WHOOP. For information about how WHOOP handles personal information, users should refer to WHOOP's own privacy documentation.
+
+## Sharing of Information
+
+Atlas does not sell, rent, or otherwise provide WHOOP information to third parties for commercial purposes.
+
+The application currently has no analytics service, advertising service, or third-party data-processing service that receives WHOOP health information.
+
+WHOOP information may be transmitted:
+
+1. Between Atlas and WHOOP when using the WHOOP API.
+2. Between the Raspberry Pi and a device accessing the Atlas dashboard over the local network.
+
+## Security
+
+Atlas takes reasonable technical measures appropriate to a personal local application to protect sensitive information.
+
+OAuth token files are stored with owner-only filesystem permissions, and OAuth communications with WHOOP use HTTPS.
+
+However, no computer system or network transmission can be guaranteed to be completely secure.
+
+The Atlas application currently operates on a local network and its dashboard API does not require user authentication. Anyone with appropriate network access to the dashboard may therefore be able to view information exposed by the dashboard.
+
+Users should operate Atlas on a trusted local network and protect access to the Raspberry Pi and the devices used to access the dashboard.
+
+## Your Choices
+
+You may disconnect the WHOOP integration from Atlas.
+
+You may also remove locally cached WHOOP records and OAuth credentials from the Raspberry Pi.
+
+Disconnecting Atlas does not automatically delete information held by WHOOP. Information held by WHOOP remains subject to WHOOP's own policies and controls.
+
+## Changes to This Privacy Policy
+
+This Privacy Policy may be updated when the Atlas application's data practices change.
+
+The "Last updated" date at the beginning of this policy indicates when the policy was most recently revised.
+
+## Contact
+
+Atlas is a personal project operated for private use.
+
+For questions about this privacy policy or the Atlas application, contact the application owner through the GitHub repository associated with this privacy policy.
